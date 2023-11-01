@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+  <title>Restaurant</title>
+</head>
+
+<body class="bg-slate-300">
+  <div class="food-container relative mx-auto p-3 pb-14 max-w-3xl ">
+    <h1 class="mt-4 text-center text-4xl"><img src="imgs/restaurant.png" alt=""
+        class="mr-2 rounded-sm w-28 inline">Al<span class="text-emerald-500 font-bold">Sayed</span>Resturant</h1>
+
+    <div class="order  form text-2xl font-bold text-center pt-10">Order <span
+        class="text-red-500 hover:text-green-500 font-extrabold text-3xl cursor-pointer" id="show-food">></span></div>
+    <!-- food -->
+    <form id="form" class="form flex opacity-0 duration-300 items-center w-80 mx-auto bg-slate-100 translate-y-[15px] md:translate-y-[24px] pr-2">
+      <input class="grow m-2 outline-none p-1 border border-solid border-gray-400" type="text" placeholder="The Name"
+        id="name" checked>
+      <label for="name" class="text-xl">: الاسم</label>
+    </form>
+    <div class=" bg-slate-100  shadow-sm p-3  mt-6 mx-2 duration-300 opacity-0">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-2 ">
+
+        <div class="grid grid-cols-3  p-2 relative  bg-slate-300 rounded-md">
+          <div class="flex items-center">
+            <div class=" w-21">
+              <span class="text-[22px] font-extrabold food-name">دجاج مشوي</span>
+              <img class="w-16 rounded-full mr-2" src="imgs/food-1.jpg" alt="">
+            </div>
+          </div>
+          <div class="w-14  pt-8 text-lg">
+            <div id="selcet" class="w-20 top-2  cursor-pointer z-10  bg-slate-400 text-gray-200  mx-1  border border-solid border-white
+        absolute p-1 select-none">Choose>
+              <div value="كامله" data-price="12000"
+                class="bg-slate-600 cursor-pointer hidden text-center hover:bg-red-900">كامله</div>
+              <div value="نص" data-price="6500" class="bg-slate-600 cursor-pointer hidden text-center hover:bg-red-900">
+                نص</div>
+            </div>
+            <div class="flex items-center mt-5">
+              <span class="price"> </span>
+              <span class=""> :السعر</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-end">
+            <span id="conterPlus" class="text-emerald-600 text-xl font-extrabold">0</span>
+            <span class="plus text-yellow-600 text-2xl font-extrabold cursor-pointer pl-1 select-none">: +</span>
+            <span class="mins text-red-700 text-3xl font-extrabold cursor-pointer pl-2 select-none">-</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 p-2 relative bg-slate-300 rounded-md">
+          <div class="flex items-center">
+            <div class=" w-21">
+              <span class="text-[22px] font-extrabold food-name">كباب مشوي</span>
+              <img class="w-16 rounded-full mr-2" src="imgs/food-2.jpg" alt="">
+            </div>
+          </div>
+          <div class="w-14 pt-8 text-lg">
+            <div id="selcet1" class="w-20 top-2 cursor-pointer z-10  bg-slate-400 text-gray-200 p-1 mx-1  border border-solid border-white
+              absolute select-none">Choose>
+              <div value="كيلو" data-price="14000"
+                class="bg-slate-600 cursor-pointer text-center hidden hover:bg-red-900">كيلو</div>
+              <div value="نص كيلو" data-price="8000"
+                class="bg-slate-600 cursor-pointer text-center hidden hover:bg-red-900">نص كيلو</div>
+              <div value="ربع كيلو" data-price="4000"
+                class="bg-slate-600 cursor-pointer text-center hidden hover:bg-red-900">ربع كيلو</div>
+            </div>
+            <div class="flex items-center mt-5 ">
+              <span class="price1"> </span>
+              <span class=""> :السعر</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-end">
+            <span id="conterPlus1" class="text-emerald-600 text-xl font-extrabold">0</span>
+            <span class="plus1 text-yellow-600 text-2xl font-extrabold cursor-pointer pl-1 select-none">: +</span>
+            <span class="mins1 text-red-700 text-3xl font-extrabold cursor-pointer pl-2 select-none">-</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 p-2 relative bg-slate-300 rounded-md">
+          <div class="flex items-center">
+            <div class=" w-21">
+              <span class="text-[22px] font-extrabold food-name">مشاوي</span>
+              <img class="w-16 rounded-full mr-2" src="imgs/food-3.jpg" alt="">
+            </div>
+          </div>
+          <div class=" w-14 pt-8 text-lg">
+            <div id="selcet2" class="w-20 cursor-pointer z-10 top-2  bg-slate-400 text-gray-200 p-1 mx-1  border border-solid border-white
+absolute select-none">Choose>
+              <div value="كيلو" data-price="14000"
+                class="bg-slate-600 cursor-pointer text-center hidden hover:bg-red-900">كيلو</div>
+              <div value="نص كيلو" data-price="8000"
+                class="bg-slate-600 cursor-pointer text-center hidden hover:bg-red-900">نص كيلو</div>
+              <div value="ربع كيلو" data-price="4000"
+                class="bg-slate-600 cursor-pointer text-center hidden hover:bg-red-900">ربع كيلو</div>
+            </div>
+            <div class="flex items-center mt-5">
+              <span class="price2"> </span>
+              <span class=""> :السعر</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-end">
+            <span id="conterPlus2" class="text-emerald-600 text-xl font-extrabold">0</span>
+            <span class="plus2 text-yellow-600 text-2xl font-extrabold cursor-pointer pl-1 select-none">: +</span>
+            <span class="mins2 text-red-700 text-3xl font-extrabold cursor-pointer pl-2 select-none">-</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-3  relative p-2 bg-slate-300 rounded-md">
+          <div class="flex items-center">
+            <div class=" w-21">
+              <span class="text-[22px] font-extrabold food-name">بيزه</span>
+              <img class="w-16 rounded-full mr-2" src="imgs/food-4.jpg" alt="">
+            </div>
+          </div>
+          <div class=" w-14  pt-8 text-lg">
+            <div id="selcet3" class="w-20 top-2  cursor-pointer z-10  bg-slate-400 text-gray-200 p-1 mx-1  border border-solid border-white select-none absolute">Choose>
+              <div value="جبن" data-price="9000"
+                class="bg-slate-600 cursor-pointer hidden text-center hover:bg-red-900">جبن</div>
+              <div value="خضار" data-price="7000"
+                class="bg-slate-600 cursor-pointer hidden text-center  hover:bg-red-900">خضار</div>
+              <div value="نباتيه" data-price="8000"
+                class="bg-slate-600 cursor-pointer hidden text-center  hover:bg-red-900">نباتيه</div>
+            </div>
+            <div class="mt-5 flex items-center">
+              <span class="price3 pl-1"> </span>
+              <span class=""> :السعر </span>
+            </div>
+          </div>
+          <div class="flex items-center justify-end  ">
+            <span id="conterPlus3" class="text-emerald-600 text-xl font-extrabold">0</span>
+            <span class="plus3 text-yellow-600 text-2xl font-extrabold cursor-pointer pl-1 select-none">: +</span>
+            <span class="mins3 text-red-700 text-3xl font-extrabold cursor-pointer pl-2 select-none">-</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button id="btn"
+      class="block duration-500 opacity-0 py-1.5  px-2.5 text-lg text-white bg-blue-500 hover:bg-blue-600 mt-9 mx-auto rounded-md">Send
+      Order</button>
+
+    <div class="orderd-food pt-5">
+      <div id="mashoy" class="relative py-14 grid-cols-1 mx-auto grid md:grid-cols-2 gap-3">
+        <h1 class="text-3xl absolute w-full h-11 text-center text-white bg-slate-500">مشاوي</h1>
+      </div>
+      <div id="pizza" class="relative py-14 grid-cols-1 mx-auto grid md:grid-cols-2 gap-3">
+        <h1 class="text-3xl absolute w-full h-11 text-center text-amber-300 bg-slate-500">بيزه</h1>
+      </div>
+      <div id="kabab" class="relative py-14 grid-cols-1 mx-auto grid md:grid-cols-2 gap-3">
+        <h1 class="text-3xl absolute w-full h-11 text-center text-white bg-slate-500">كباب مشوي</h1>
+      </div>
+      <div id="chicken" class="relative py-14 grid-cols-1 mx-auto grid md:grid-cols-2 gap-3">
+        <h1 class="text-3xl absolute w-full h-11 text-center text-amber-300 bg-slate-500">دجاج مشوي</h1>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
